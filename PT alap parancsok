@@ -41,6 +41,10 @@ Domain név beállítása
 Titkosítási kulcs létrehozása:
   crypto key generate rsa
 
+SSH login beállítása:
+  line vty 0
+  login local
+
 SSH verzió beállítása:
   transport input ssh
   ip ssh version 2
