@@ -1,3 +1,5 @@
+Router
+
 Eszköznév
   Router>enable
   Router#configure terminal
@@ -32,3 +34,45 @@ IP cím beállítása:
 A konfiguráció törlése, alaphelyzet visszaállítása:
   R1#erase startup-config
   R1#reload
+
+--------------------------------------------------------------------------------------
+Switch
+
+Az aktuális konfiguráció megtekintése:
+  #show running-config
+
+A mentett, vagyis újraindítás utáni konfiguráció megtekintése:
+  #show startup-config
+
+Üdvözlő szöveg
+  S1(config)#banner motd #szöveg#
+
+Beállítások mentése
+  write
+
+Konzolhoz hozzáférés
+  S1(config)#line console 0
+  S1(config-line)#password fekete
+  S1(config-line)#login
+  S1(config-line)#exit
+
+Titkosított jelszó
+  S1(config)#service password-encryption
+
+Jelszó megnézés:
+  #show running-config
+  vagy:
+  #show startup-config
+
+IP cím beállítása:
+  S1(config-if)#ip address 192.168.5.1 255.255.255.0
+
+Telnet beállítás
+  S1(config)#line vty 0 4
+  S1(config-line)#pass
+  S1(config-line)#password titok
+  S1(config-line)#login
+  S1(config-line)#endű
+
+Alapértelmezett átjáró beállítása:
+  S1(config)#ip default-gateway 192.168.10.1
