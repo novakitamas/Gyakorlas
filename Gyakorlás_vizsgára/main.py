@@ -102,7 +102,19 @@ def main() -> None:
         if v > 5:
             print(f'\t{k} - {v}db')
 
-
+    #Legmagasabb épulet adatai
+    legmagasabb: float = 0
+    for e in épületek:
+        if float(e.magasság) > legmagasabb:
+            legmagasabb = float(e.magasság)
+            legmagasabb_epulet = e
+    print(f"A legmagasabb épület adatai:")
+    print(f"Név: {legmagasabb_epulet.név}")
+    print(f"Város: {legmagasabb_epulet.város}")
+    print(f"Ország: {legmagasabb_epulet.ország}")
+    print(f"Magasság: {legmagasabb_epulet.magasság} m")
+    print(f"Emeletek: {legmagasabb_epulet.emelet} ")
+    print(f"Épült: {legmagasabb_epulet.épült} ")
 
 
 
