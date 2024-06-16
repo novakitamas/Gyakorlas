@@ -48,6 +48,39 @@
 						"  for sor in file.read().splitlines()[1:]:  # [1:] - első sor kihagyása",
 							"    listaneve.append(osztaly(pl:épület)(sor))"],
 		"description":"Egy utf-8 as fájl beolvasása és annak listában tárolása"
+	},
+
+	"listaszamlalas":{
+		"prefix": "listaelemekszamlalasa_sajat",
+		"body": ["len(listaneve)"],
+		"description": "Lista elemeinek megszámlálása"
+	},
+
+	"peldafor":{
+		"prefix": "forpelda_sajat",
+		"body": ["Janosok = 0",
+			"for e in lista",
+					"  if e.nev == 'Janos':",
+						"    Janosok += 1"],
+		"description": "Sima for pelda, nevnek kell lennie az class listaban"
+	},						
+		
+	"kettotizedesjegy":{
+		"prefix": "kettotizedesjegy_sajat",
+		"body": ["'{:.2f}'.format()"],
+		"description": "Ketto tizedesjegyig ír ki"
+	},
+	
+	"import math":{
+		"prefix": "impm_sajat",
+		"body": ["import math"],
+		"description": "import math"
+	},
+
+	"import random":{
+		"prefix": "impr_sajat",
+		"body": ["import random"],
+		"description": "import random"
 	}
 }
 
