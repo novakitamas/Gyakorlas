@@ -12,6 +12,11 @@ Felhasználói mód jelszó
   R1(config-line)#login
   R1(config-line)#end
 
+TFTP használata (config mentése, másolása):
+  copy ru tftp
+  {cél ip}	ip
+  {file neve}	nev
+
 Jelszó privilegizált módban:
   R1(config)#enable secret titok
   R1(config)#enable password titok
