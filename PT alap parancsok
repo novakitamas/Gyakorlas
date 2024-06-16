@@ -35,6 +35,16 @@ A konfiguráció törlése, alaphelyzet visszaállítása:
   R1#erase startup-config
   R1#reload
 
+Domain név beállítása
+  ip domain name nev.com
+
+Titkosítási kulcs létrehozása:
+  crypto key generate rsa
+
+SSH verzió beállítása:
+  transport input ssh
+  ip ssh version 2
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Switch
 
