@@ -1,0 +1,34 @@
+Eszköznév
+  Router>enable
+  Router#configure terminal
+  Router(config)#hostname R1
+  R1(config)#
+
+Felhasználói mód jelszó
+  R1(config)#line con 0
+  R1(config-line)#password titok
+  R1(config-line)#login
+  R1(config-line)#end
+
+Jelszó privilegizált módban:
+  R1(config)#enable secret titok
+  R1(config)#enable password titok
+
+Telnet jelszo
+  R1(config)#line vty 0 15
+  R1(config-line)#password titok
+  R1(config-line)#login
+  R1(config-line)#end
+
+Jelszavak titkosítása:
+  R1(config)#service password-encryption
+
+IP cím beállítása:
+  R1(config)#interface GigabitEthernet 0/0
+  R1(config-if)#ip address 192.168.8.1 255.255.255.0
+  R1(config-if)#no shutdown
+  R1(config-if)#end
+
+A konfiguráció törlése, alaphelyzet visszaállítása:
+  R1#erase startup-config
+  R1#reload
