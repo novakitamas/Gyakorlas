@@ -81,6 +81,13 @@
 		"prefix": "impr_sajat",
 		"body": ["import random"],
 		"description": "import random"
+	},
+
+	"len":{
+		"prefix": "len_sajat",
+		"body": ["len(lista)"],
+		"description": "Lista elemeinek megszámlálása"
 	}
+
 }
 
